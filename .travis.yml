@@ -2,20 +2,26 @@ language: php
 
 matrix:
   include:
-    - php: '7.0'
-      env: SNIFF=1
-  allow_failures:
+    # Arbitrary PHP version to run the sniffs against.
     - php: '7.0'
       env: SNIFF=1
 
 before_install:
-  - if [[ "$SNIFF" == "1" ]]; then export PHPCS_DIR=$PWD/vendor/bin; fi
-  - if [[ "$SNIFF" == "1" ]]; then export SNIFFS_DIR=$PWD/vendor/wp-coding-standards/wpcs; fi
-  - composer install
-  - composer update 
-  - ./vendor/bin/phpcs --config-set installed_paths $SNIFFS_DIR
-  - ./vendor/bin/phpcs -i
-  - if [[ "$SNIFF" == "1" ]]; then ./vendor/bin/phpcs --config-set installed_paths $SNIFFS_DIR; fi
+  - if [[ "$SNIFF" == "1" ]]; then export PHPCS_DIR=/tmp/phpcs; fi
+  - if [[ "$SNIFF" == "1" ]]; then export SNIFFS_DIR=/tmp/sniffs; fi
+  # Install PHP_CodeSniffer.
+  - if [[ "$SNIFF" == "1" ]]; then git clone -b master --depth 1 https://github.com/squizlabs/PHP_CodeSniffer.git $PHPCS_DIR; fi
+  # Install WordPress Coding Standards.
+  - if [[ "$SNIFF" == "1" ]]; then git clone -b master --depth 1 https://github.com/WordPress/WordPress-Coding-Standards.git $SNIFFS_DIR; fi
+  # Set install path for WordPress Coding Standards.
+  - if [[ "$SNIFF" == "1" ]]; then $PHPCS_DIR/bin/phpcs --config-set installed_paths $SNIFFS_DIR; fi
+  # After CodeSniffer install you should refresh your path.
+  - if [[ "$SNIFF" == "1" ]]; then phpenv rehash; fi
 
 script:
-  - if [[ "$SNIFF" == "1" ]]; then ./vendor/bin/phpcs -p . --standard=WordPress; fi
+  # Run against WordPress Coding Standards.
+  # If you use a custom ruleset, change `--standard=WordPress` to point to your ruleset file,
+  # for example: `--standard=wpcs.xml`.
+  # You can use any of the normal PHPCS command line arguments in the command:
+  # https://github.com/squizlabs/PHP_CodeSniffer/wiki/Usage
+  - if [[ "$SNIFF" == "1" ]]; then $PHPCS_DIR/bin/phpcs -p . --standard=WordPress; fi

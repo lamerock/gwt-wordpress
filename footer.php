@@ -15,7 +15,7 @@
 <?php if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) || is_active_sidebar( 'footer-4' ) ) : ?>
 <div id="footer" class="anchor" name="agencyfooter">
 	<div id="supplementary" class="row">
-		<?php if ( is_active_sidebar('footer-1' ) ) : ?>
+		<?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
 		<div class="<?php govph_displayoptions( 'govph_position_agency_footer' ); ?>" role="complementary">
 			<?php do_action( 'before_sidebar' ); ?>
 			<?php dynamic_sidebar( 'footer-1' ); ?>

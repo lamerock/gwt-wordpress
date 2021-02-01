@@ -7,42 +7,42 @@
  * @package GWT
  * @since Government Website Template 2.0
  */
-?>
-	
+ 
+ ?>
+
 
 <!-- agency footer -->
-<?php if(is_active_sidebar('footer-1') || is_active_sidebar('footer-2') || is_active_sidebar('footer-3') ||
-is_active_sidebar('footer-4')): ?>
+<?php if( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) || is_active_sidebar( 'footer-4' ) ) : ?>
 <div id="footer" class="anchor" name="agencyfooter">
-  <div id="supplementary" class="row">
-    <?php if(is_active_sidebar('footer-1')): ?>
-    <div class="<?php govph_displayoptions( 'govph_position_agency_footer' ); ?>" role="complementary">
-      <?php do_action( 'before_sidebar' ); ?>
-      <?php dynamic_sidebar( 'footer-1' ); ?>
-    </div>
-    <?php endif; // if active footer-1 ?>
+	<div id="supplementary" class="row">
+		<?php if( is_active_sidebar('footer-1' ) ) : ?>
+		<div class="<?php govph_displayoptions( 'govph_position_agency_footer' ); ?>" role="complementary">
+			<?php do_action( 'before_sidebar' ); ?>
+			<?php dynamic_sidebar( 'footer-1' ); ?>
+		</div>
+		<?php endif; // if active footer-1 ?>
 
-    <?php if(is_active_sidebar('footer-2')): ?>
-    <div class="<?php govph_displayoptions( 'govph_position_agency_footer' ); ?>" role="complementary">
-      <?php do_action( 'before_sidebar' ); ?>
-      <?php dynamic_sidebar( 'footer-2' ); ?>
-    </div>
-    <?php endif; // if active footer-2 ?>
+		<?php if(is_active_sidebar( 'footer-2' ) ) : ?>
+		<div class="<?php govph_displayoptions( 'govph_position_agency_footer' ); ?>" role="complementary">
+			<?php do_action( 'before_sidebar' ); ?>
+			<?php dynamic_sidebar( 'footer-2' ); ?>
+		</div>
+		<?php endif; // if active footer-2 ?>
 
-    <?php if(is_active_sidebar('footer-3')): ?>
-    <div class="<?php govph_displayoptions( 'govph_position_agency_footer' ); ?>" role="complementary">
-      <?php do_action( 'before_sidebar' ); ?>
-      <?php dynamic_sidebar( 'footer-3' ); ?>
-    </div>
-    <?php endif; // if active footer-3 ?>
+		<?php if(is_active_sidebar( 'footer-3' ) ) : ?>
+		<div class="<?php govph_displayoptions( 'govph_position_agency_footer' ); ?>" role="complementary">
+			<?php do_action( 'before_sidebar' ); ?>
+			<?php dynamic_sidebar( 'footer-3' ); ?>
+		</div>
+		<?php endif; // if active footer-3 ?>
 
-    <?php if(is_active_sidebar('footer-4')): ?>
-    <div class="<?php govph_displayoptions( 'govph_position_agency_footer' ); ?>" role="complementary">
-      <?php do_action( 'before_sidebar' ); ?>
-      <?php dynamic_sidebar( 'footer-4' ); ?>
-    </div>
-    <?php endif; // if active footer-4 ?>
-  </div>
+		<?php if(is_active_sidebar( 'footer-4' ) ) : ?>
+		<div class="<?php govph_displayoptions( 'govph_position_agency_footer' ); ?>" role="complementary">
+			<?php do_action( 'before_sidebar' ); ?>
+			<?php dynamic_sidebar( 'footer-4' ); ?>
+		</div>
+		<?php endif; // if active footer-4 ?>
+	</div>
 </div>
 <?php endif; ?>
 
@@ -57,11 +57,10 @@ is_active_sidebar('footer-4')): ?>
 <!-- standard footer script -->
 <script type="text/javascript">
 (function(d, s, id) {
-  var js, gjs = d.getElementById('gwt-standard-footer');
-
-  js = d.createElement(s); js.id = id;
-  js.src = "//gwhs.i.gov.ph/gwt-footer/footer.js";
-  gjs.parentNode.insertBefore(js, gjs);
+	var js, gjs = d.getElementById('gwt-standard-footer');
+	js = d.createElement(s); js.id = id;
+	js.src = "//gwhs.i.gov.ph/gwt-footer/footer.js";
+	gjs.parentNode.insertBefore(js, gjs);
 }(document, 'script', 'gwt-footer-jsdk'));
 </script>
 

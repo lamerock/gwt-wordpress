@@ -55,8 +55,10 @@ class GOVPH
   {
     $this->options = get_option('govph_options');
     // to avoid warnings, reinstatiate all arrays that does not exist
-    if(sizeof($this->options) > 0){
+    if(is_array($this->options) && count($this->options) > 0){
       $this->options = array_merge($this->_default_options, $this->options);
+    } else {
+      $this->options = $this->_default_options;
     }
 
     $this->register_settings_fields();

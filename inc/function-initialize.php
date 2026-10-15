@@ -118,6 +118,7 @@ function gwt_wp_setup() {
 			$id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args );
 			$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
 
+			$args = (object) $args;
 			$output .= $indent . "\t\t\t\t\t" . '<li' . $id . $value . $class_names .'>';
 
 			$attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
@@ -172,6 +173,7 @@ function gwt_wp_setup() {
 			$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
 			$id = strpos($class_names,'has-megamenu') ? ' id="'. $mega_menu_id .'-menu"' : $id; //added for mega menu
 
+			$args = (object) $args;
 			$output .= $indent . '<li' . $id . $value . $class_names .'>';
 
 			$attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
@@ -192,7 +194,7 @@ function gwt_wp_setup() {
 			$output .= "</li>\n";
 		}
 
-		function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output ) {
+		function display_element( $element, &$children_elements, $max_depth, $depth, $args, &$output ) {
 			$id_field = $this->db_fields['id'];
 			if ( !empty( $children_elements[ $element->$id_field ] ) ) {
 				$element->classes[] = 'has-dropdown';

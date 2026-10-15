@@ -14,6 +14,14 @@ function gwt_wp_widgets_init() {
 		'topbar_right' 	=> __( 'Right Menu Top bar', 'gwt_wp' ),
 	) );
 	register_sidebar( array(
+		'name'			=> __( 'Breadcrumb (replaces default)', 'gwt_wp' ),
+		'id'			=> 'breadcrumb-widget',
+		'before_widget'	=> '<div id="%1$s" class="widget %2$s">',
+		'after_widget'	=> '</div>',
+		'before_title'	=> '<h3 class="widget-title show-for-sr">',
+		'after_title'	=> '</h3>',
+	) );
+	register_sidebar( array(
 		'name'			=> __( 'Left Sidebar', 'gwt_wp' ),
 		'id'			=> 'left-sidebar',
 		'before_widget'	=> '<aside id="%1$s" class="widget callout secondary %2$s">',

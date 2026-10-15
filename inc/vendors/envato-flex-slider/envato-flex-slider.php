@@ -21,6 +21,8 @@ function efs_get_slider(){
 	query_posts($efs_query);
 	
 	global $post_id;
+	$slider = '';
+	$count = 0;
 	
 	if (have_posts()) : 	
 		

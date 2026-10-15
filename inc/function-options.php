@@ -66,7 +66,7 @@ class GOVPH
 
   public static function add_menu_page()
   {
-    add_theme_page('Theme Options', 'Theme Options', 'administrator', 'govph-options', array('GOVPH', 'govph_options_page'),6);
+    add_theme_page('Theme Options', 'Theme Options', 'administrator', 'govph-options', array(new GOVPH(), 'govph_options_page'),6);
   }
 
   public function govph_options_page()

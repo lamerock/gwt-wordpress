@@ -774,6 +774,13 @@ function mw_enqueue_color_picker( $hook_suffix ) {
 function govph_displayoptions( $options ){
   // echo $option['govph_custom_border_width'];
   $option = get_option('govph_options', array());
+  $option = wp_parse_args($option, array(
+    'govph_logo_enable'       => '',
+    'govph_agency_name'       => '',
+    'govph_agency_tagline'    => '',
+    'govph_slider_fullwidth'  => '',
+    'govph_disable_search'    => '',
+  ));
 
   switch ($options) {
     case 'govph_logo_enable':

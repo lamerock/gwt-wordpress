@@ -773,7 +773,7 @@ function mw_enqueue_color_picker( $hook_suffix ) {
 
 function govph_displayoptions( $options ){
   // echo $option['govph_custom_border_width'];
-  $option = get_option('govph_options');
+  $option = get_option('govph_options', array());
 
   switch ($options) {
     case 'govph_logo_enable':

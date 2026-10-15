@@ -96,7 +96,6 @@ function slider_link_save_meta_box_data( $post_id ){
 add_action( 'save_post_slider-image', 'slider_link_save_meta_box_data' );
 
 function slider_link_get_meta_box_data($post_id){
-    // @todo: format the url into proper url
     $slider_link = get_post_meta($post_id, '_slider_link', true);
     if($slider_link == ''){
         return '#';

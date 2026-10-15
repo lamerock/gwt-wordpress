@@ -4,7 +4,11 @@
  */
 function gwt_wp_breadcrumb() {
 	global $post;
-	$option = get_option('govph_options', array());
+	$option = wp_parse_args(get_option('govph_options', array()), array(
+		'govph_breadcrumbs_enable'    => '',
+		'govph_breadcrumbs_separator' => '',
+		'govph_breadcrumbs_show_home' => '',
+	));
 
 	if($option['govph_breadcrumbs_enable'] != 'true'){
 		return false;

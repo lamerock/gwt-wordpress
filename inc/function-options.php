@@ -829,7 +829,6 @@ function govph_displayoptions( $options ){
     case 'govph_disable_search':
       return ($option['govph_disable_search'] ? true : false);
       break;
-    // TODO: disable option for widget position, make it dynamic, displays sidebars when atleast one widget is active
     case 'govph_content_position':
       $content_class = 'large-12 medium-12 ';
       if(is_active_sidebar('left-sidebar')){

@@ -4,7 +4,7 @@
  */
 function gwt_wp_breadcrumb() {
 	global $post;
-	$option = get_option('govph_options');
+	$option = get_option('govph_options', array());
 
 	if($option['govph_breadcrumbs_enable'] != 'true'){
 		return false;

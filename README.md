@@ -1,6 +1,6 @@
 # GWT WordPress Theme
 
-[![Theme version 25.5.1](https://img.shields.io/badge/theme-25.5.1-21759B?logo=wordpress&logoColor=white)](style.css)
+[![Theme version 25.5.2](https://img.shields.io/badge/theme-25.5.2-21759B?logo=wordpress&logoColor=white)](style.css)
 [![WordPress 6.3+](https://img.shields.io/badge/WordPress-6.3%2B-21759B?logo=wordpress&logoColor=white)](https://wordpress.org/download/)
 [![PHP 8.3+](https://img.shields.io/badge/PHP-8.3%2B-777BB4?logo=php&logoColor=white)](https://www.php.net/supported-versions.php)
 [![MIT license](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/license/mit)

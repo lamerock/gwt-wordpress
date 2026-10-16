@@ -2,6 +2,20 @@
 
 Notable changes to this project are documented here in reverse chronological order. Release dates use ISO 8601 format.
 
+## [25.5.2] - 2026-10-16
+
+### Fixed
+
+- Fixed `js/theme.js` using `$` outside the jQuery wrapper, which stopped Foundation from initializing under WordPress's no-conflict jQuery.
+- Fixed the home page banner slider not displaying: removed theme CSS that collapsed the Orbit container, set `loading="eager"` on slide images, marked only the first slide active, and corrected the slider markup (controls and bullets structure, stray closing tag).
+- Fixed slider navigation: Orbit now runs with `useMUI:false` because the theme has no Motion UI CSS and transitions never completed.
+- Fixed the fixed top bar floating below the page top by adding `top: 0` to `#main-nav`.
+
+### Development
+
+- Applied automatic WordPress Coding Standards fixes (mainly line endings) across the theme PHP files.
+- Remaining PHP_CodeSniffer findings are in `inc/vendors/envato-flex-slider/` and need logic changes.
+
 ## [25.5.1] - 2026-10-16
 
 ### Added

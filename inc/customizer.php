@@ -1,6 +1,6 @@
 <?php
 /**
- * gwt_wp Theme Customizer
+ * GWT Theme Customizer
  *
  * @package GWT
  * @since Government Website Template 2.0

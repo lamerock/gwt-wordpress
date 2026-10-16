@@ -20,7 +20,7 @@
 	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
-	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
+	<link rel="shortcut icon" href="<?php echo esc_url( get_stylesheet_directory_uri() . '/favicon.ico' ); ?>" />
 	<?php wp_head(); ?>
 
 	<style <?php the_tags(); ?>>
@@ -68,7 +68,7 @@
 		}
 	</style>
 	<script type="text/javascript" language="javascript">
-		var template_directory = '<?php echo get_template_directory_uri(); ?>';
+		var template_directory = '<?php echo esc_url( get_template_directory_uri() ); ?>';
 	</script>
 </head>
 
@@ -77,26 +77,33 @@
 <div id="accessibility-shortcuts">
 	<ul>
 		<li><a href="#" class="skips toggle-statement" title="Toggle Accessibility Statement" accesskey="0" data-toggle="a11y-modal">Toggle Accessibility Statement</a></li>
-		<?php if($govph_acc_link_home = govph_displayoptions('govph_acc_link_home')): ?>
-		<li><a href="<?php echo $govph_acc_link_home; ?>" accesskey="h">Home</a></li>
+		<?php $govph_acc_link_home = govph_displayoptions( 'govph_acc_link_home' ); ?>
+		<?php if ( $govph_acc_link_home ) : ?>
+		<li><a href="<?php echo esc_url( $govph_acc_link_home ); ?>" accesskey="h">Home</a></li>
 		<?php endif; ?>
-		<?php if($govph_acc_link_contact = govph_displayoptions('govph_acc_link_contact')): ?>
-		<li><a href="<?php echo $govph_acc_link_contact; ?>" accesskey="c">Contacts</a></li>
+		<?php $govph_acc_link_contact = govph_displayoptions( 'govph_acc_link_contact' ); ?>
+		<?php if ( $govph_acc_link_contact ) : ?>
+		<li><a href="<?php echo esc_url( $govph_acc_link_contact ); ?>" accesskey="c">Contacts</a></li>
 		<?php endif; ?>
-		<?php if($govph_acc_link_feedback = govph_displayoptions('govph_acc_link_feedback')): ?>
-		<li><a href="<?php echo $govph_acc_link_feedback; ?>" accesskey="k">Feedback</a></li>
+		<?php $govph_acc_link_feedback = govph_displayoptions( 'govph_acc_link_feedback' ); ?>
+		<?php if ( $govph_acc_link_feedback ) : ?>
+		<li><a href="<?php echo esc_url( $govph_acc_link_feedback ); ?>" accesskey="k">Feedback</a></li>
 		<?php endif; ?>
-		<?php if($govph_acc_link_faq = govph_displayoptions('govph_acc_link_faq')): ?>
-		<li><a href="<?php echo $govph_acc_link_faq; ?>" accesskey="q">FAQ</a></li>
+		<?php $govph_acc_link_faq = govph_displayoptions( 'govph_acc_link_faq' ); ?>
+		<?php if ( $govph_acc_link_faq ) : ?>
+		<li><a href="<?php echo esc_url( $govph_acc_link_faq ); ?>" accesskey="q">FAQ</a></li>
 		<?php endif; ?>
-		<?php if($govph_acc_link_search = govph_displayoptions('govph_acc_link_search')): ?>
-		<li><a href="<?php echo $govph_acc_link_search; ?>" accesskey="s">Search</a></li>
+		<?php $govph_acc_link_search = govph_displayoptions( 'govph_acc_link_search' ); ?>
+		<?php if ( $govph_acc_link_search ) : ?>
+		<li><a href="<?php echo esc_url( $govph_acc_link_search ); ?>" accesskey="s">Search</a></li>
 		<?php endif; ?>
-		<?php if($govph_acc_link_main_content = govph_displayoptions('govph_acc_link_main_content')): ?>
-		<li><a href="<?php echo $govph_acc_link_main_content; ?>" accesskey="R">Skip to Main Content</a></li>
+		<?php $govph_acc_link_main_content = govph_displayoptions( 'govph_acc_link_main_content' ); ?>
+		<?php if ( $govph_acc_link_main_content ) : ?>
+		<li><a href="<?php echo esc_url( $govph_acc_link_main_content ); ?>" accesskey="R">Skip to Main Content</a></li>
 		<?php endif; ?>
-		<?php if($govph_acc_link_sitemap = govph_displayoptions('govph_acc_link_sitemap')): ?>
-		<li><a href="<?php echo $govph_acc_link_sitemap; ?>" accesskey="M">Sitemap</a></li>
+		<?php $govph_acc_link_sitemap = govph_displayoptions( 'govph_acc_link_sitemap' ); ?>
+		<?php if ( $govph_acc_link_sitemap ) : ?>
+		<li><a href="<?php echo esc_url( $govph_acc_link_sitemap ); ?>" accesskey="M">Sitemap</a></li>
 		<?php endif; ?>
 	</ul>
 </div>
@@ -151,12 +158,39 @@ Press esc, or click the close the button to close this dialog box.
 		<nav id="offCanvasRight" class="off-canvas position-right hide-for-large" data-off-canvas data-position="right">
 			<div class="list-item" ><?php get_search_form(); ?></div>
 			<ul class="vertical menu" data-drilldown data-parent-link="true">
-				<?php wp_nav_menu( array('theme_location'  => 'topbar_left', 'items_wrap' => '%3$s', 'container' => false,'walker' => new Off_Canvass_Menu() )); ?> 
-				<?php wp_nav_menu( array('theme_location'  => 'topbar_right', 'items_wrap' => '%3$s', 'container' => false, 'fallback_cb' => false, 'walker' => new Off_Canvass_Menu() )); ?>
-				<?php // if(has_nav_menu('aux_nav')): ?>
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'topbar_left',
+						'items_wrap'     => '%3$s',
+						'container'      => false,
+						'walker'         => new Off_Canvass_Menu(),
+					)
+				);
+				?>
+								<?php
+								wp_nav_menu(
+									array(
+										'theme_location' => 'topbar_right',
+										'items_wrap'     => '%3$s',
+										'container'      => false,
+										'fallback_cb'    => false,
+										'walker'         => new Off_Canvass_Menu(),
+									)
+								);
+								?>
 				<li id="aux-offmenu" class="list-item">AUXILIARY MENU</li>
-				<?php wp_nav_menu( array('theme_location'  => 'aux_nav', 'items_wrap' => '%3$s', 'container' => false, 'fallback_cb' => false, 'walker' => new Off_Canvass_Menu() )); ?>
-				<?php //endif; ?>
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'aux_nav',
+						'items_wrap'     => '%3$s',
+						'container'      => false,
+						'fallback_cb'    => false,
+						'walker'         => new Off_Canvass_Menu(),
+					)
+				);
+				?>
 			</ul>
 		</nav>
 
@@ -167,14 +201,34 @@ Press esc, or click the close the button to close this dialog box.
 					<nav class="top-bar-left">
 						<ul class="dropdown menu" data-dropdown-menu>
 							<li class="name"><a href="http://www.gov.ph">GOVPH</a></li>
-							<?php wp_nav_menu( array('theme_location'  => 'topbar_left', 'items_wrap' => '%3$s', 'container' => false, 'fallback_cb' => false, 'walker' => new Topbar_Nav_Menu() )); ?>
+							<?php
+							wp_nav_menu(
+								array(
+									'theme_location' => 'topbar_left',
+									'items_wrap'     => '%3$s',
+									'container'      => false,
+									'fallback_cb'    => false,
+									'walker'         => new Topbar_Nav_Menu(),
+								)
+							);
+							?>
 						</ul>
 					</nav>
 
 					<nav class="top-bar-right">
 						<ul class="dropdown menu" data-dropdown-menu>
-							<?php wp_nav_menu( array('theme_location'  => 'topbar_right', 'items_wrap' => '%3$s', 'container' => false, 'fallback_cb' => false, 'walker' => new Topbar_Nav_Menu() )); ?>
-							<?php if(govph_displayoptions( 'govph_disable_search' )): ?>
+							<?php
+							wp_nav_menu(
+								array(
+									'theme_location' => 'topbar_right',
+									'items_wrap'     => '%3$s',
+									'container'      => false,
+									'fallback_cb'    => false,
+									'walker'         => new Topbar_Nav_Menu(),
+								)
+							);
+							?>
+							<?php if ( govph_displayoptions( 'govph_disable_search' ) ) : ?>
 							<li class="search right"><?php get_search_form(); ?></li>
 							<?php endif ?>
 							<li>
@@ -219,20 +273,18 @@ Press esc, or click the close the button to close this dialog box.
 		<!-- original content goes in this container -->
 		<div class="off-canvas-content" data-off-canvas-content>
 			<?php
-			$name_slogan_class = 'large-12 ';
-			$ear_content_class = '';
+			$name_slogan_class   = 'large-12 ';
+			$ear_content_class   = '';
 			$ear_content_2_class = '';
-			if(is_active_sidebar('ear-content-1') && is_active_sidebar('ear-content-2')){
-				$name_slogan_class = 'large-6 ';
-				$ear_content_class = 'large-3 ';
+			if ( is_active_sidebar( 'ear-content-1' ) && is_active_sidebar( 'ear-content-2' ) ) {
+				$name_slogan_class   = 'large-6 ';
+				$ear_content_class   = 'large-3 ';
 				$ear_content_2_class = 'large-3 ';
-			}
-			elseif(is_active_sidebar('ear-content-1') && !is_active_sidebar('ear-content-2')){
+			} elseif ( is_active_sidebar( 'ear-content-1' ) && ! is_active_sidebar( 'ear-content-2' ) ) {
 				$name_slogan_class = 'large-9 ';
 				$ear_content_class = 'large-3 ';
-			}
-			elseif(!is_active_sidebar('ear-content-1') && is_active_sidebar('ear-content-2')){
-				$name_slogan_class = 'large-9 ';
+			} elseif ( ! is_active_sidebar( 'ear-content-1' ) && is_active_sidebar( 'ear-content-2' ) ) {
+				$name_slogan_class   = 'large-9 ';
 				$ear_content_2_class = 'large-3 ';
 			}
 			?>
@@ -240,19 +292,19 @@ Press esc, or click the close the button to close this dialog box.
 			<!-- masthead -->
 			<header class="container-masthead">
 				<div class="row">
-					<div class="<?php echo $name_slogan_class ?> columns">
+					<div class="<?php echo esc_attr( $name_slogan_class ); ?> columns">
 						<h1 class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php govph_displayoptions( 'govph_logo' ); ?></a></h1>
 					</div>
 
-					<?php if(is_active_sidebar('ear-content-1')): ?>
-						<div class="<?php echo $ear_content_class ?> columns">
+					<?php if ( is_active_sidebar( 'ear-content-1' ) ) : ?>
+						<div class="<?php echo esc_attr( $ear_content_class ); ?> columns">
 							<?php do_action( 'before_sidebar' ); ?>
 							<?php dynamic_sidebar( 'ear-content-1' ); ?>
 						</div>
 					<?php endif; ?>
 
-					<?php if(is_active_sidebar('ear-content-2')): ?>
-						<div class="<?php echo $ear_content_2_class ?> columns">
+					<?php if ( is_active_sidebar( 'ear-content-2' ) ) : ?>
+						<div class="<?php echo esc_attr( $ear_content_2_class ); ?> columns">
 							<?php do_action( 'before_sidebar' ); ?>
 							<?php dynamic_sidebar( 'ear-content-2' ); ?>
 						</div>

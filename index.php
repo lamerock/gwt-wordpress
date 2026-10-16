@@ -11,8 +11,8 @@
  * @since Government Website Template 2.0
  */
 
-get_header(); 
-include_once('inc/banner.php');
+get_header();
+require_once 'inc/banner.php';
 ?>
 		<?php govph_displayoptions( 'govph_panel_top' ); ?>
 
@@ -23,29 +23,32 @@ include_once('inc/banner.php');
 
 						<?php
 						// Start the loop.
-						while ( have_posts() ) : the_post();
-						/*
-						 * Include the Post-Format-specific template for the content.
-						 * If you want to override this in a child theme, then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'template-parts/content', get_post_format() );
-						// End the loop.
+						while ( have_posts() ) :
+							the_post();
+
+							/*
+							* Include the Post-Format-specific template for the content.
+							* If you want to override this in a child theme, then include a file
+							* called content-___.php (where ___ is the Post Format name) and that will be used instead.
+							*/
+							get_template_part( 'template-parts/content', get_post_format() );
+							// End the loop.
 						endwhile;
 						gwt_wp_content_nav( 'nav-below' );
 
 						else :
-							get_template_part( 'no-results', 'index' ); 
-						endif; ?>
+							get_template_part( 'no-results', 'index' );
+						endif;
+						?>
 				</div><!-- end content -->
 				   
 				<?php
-				if(is_active_sidebar('left-sidebar')){
+				if ( is_active_sidebar( 'left-sidebar' ) ) {
 					govph_displayoptions( 'govph_sidebar_left' );
 				}
 				?>
 				<?php
-				if(is_active_sidebar('right-sidebar')){
+				if ( is_active_sidebar( 'right-sidebar' ) ) {
 					govph_displayoptions( 'govph_sidebar_right' );
 				}
 				?>
@@ -57,4 +60,3 @@ include_once('inc/banner.php');
 <?php govph_displayoptions( 'govph_panel_bottom' ); ?>
 
 <?php get_footer(); ?>
-		

@@ -1,6 +1,6 @@
 <?php
 /**
- * gwt_wp functions and definitions
+ * GWT functions and definitions.
  *
  * @package gwt_wp
  */
@@ -28,12 +28,12 @@ require get_template_directory() . '/inc/function-excerpt.php';
 /**
  * Enqueue scripts and styles
  */
-require get_template_directory() . '/inc/function-enqueue_scripts.php';
+require get_template_directory() . '/inc/function-enqueue-scripts.php';
 
 /**
  * Disable comment functions
  */
-require get_template_directory() . '/inc/function-disable_comments.php';
+require get_template_directory() . '/inc/function-disable-comments.php';
 
 /**
  * GovPH default widgets
@@ -58,12 +58,10 @@ require get_template_directory() . '/inc/extras.php';
 /**
  * Customizer additions.
  */
-// require get_template_directory() . '/inc/customizer.php';
 
 /**
  * Load Jetpack compatibility file.
  */
-// require get_template_directory() . '/inc/jetpack.php';
 
 /**
  * Theme Options Page.
@@ -73,7 +71,6 @@ require get_template_directory() . '/inc/function-options.php';
 /**
  * Custom Post Types
  */
-// require get_template_directory() . '/inc/custom-post-types.php';
 
 /**
  * Custom template tags for this theme.

@@ -5,6 +5,7 @@
  * @package GWT
  * @since Government Website Template 2.0
  */
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -17,11 +18,13 @@
 		</div>
 		<?php the_content(); ?>
 		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'gwt_wp' ),
-				'after'  => '</div>',
-			) );
-		?>
+			wp_link_pages(
+				array(
+					'before' => '<div class="page-links">' . __( 'Pages:', 'gwt_wp' ),
+					'after'  => '</div>',
+				)
+			);
+			?>
 	</div>
 	
 </article>

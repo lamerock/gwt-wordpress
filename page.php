@@ -12,7 +12,7 @@
  */
 
 get_header();
-include_once('inc/banner.php');
+require_once 'inc/banner.php';
 ?>
 
 <?php govph_displayoptions( 'govph_panel_top' ); ?>
@@ -22,21 +22,22 @@ include_once('inc/banner.php');
 		
 		<div id="content" class="<?php govph_displayoptions( 'govph_content_position' ); ?>columns" role="main">
 			<?php
-				while( have_posts() ) : the_post(); 
-				
-				get_template_part('template-parts/content', 'page'); 
-				
-				endwhile; //end of the loop 
+			while ( have_posts() ) :
+				the_post();
+
+				get_template_part( 'template-parts/content', 'page' );
+
+				endwhile; // End of the loop.
 			?>
 		</div><!-- end content -->
 		
 		<?php
-		if(is_active_sidebar('left-sidebar')):
+		if ( is_active_sidebar( 'left-sidebar' ) ) :
 			govph_displayoptions( 'govph_sidebar_left' );
 		endif;
 		?>
 		<?php
-		if(is_active_sidebar('right-sidebar')):
+		if ( is_active_sidebar( 'right-sidebar' ) ) :
 			govph_displayoptions( 'govph_sidebar_right' );
 		endif;
 		?>

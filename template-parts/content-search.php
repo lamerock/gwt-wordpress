@@ -5,20 +5,21 @@
  * @package GWT
  * @since Government Website Template 2.0
  */
+
 ?>
 
 <div class="post-box">
-	<article id="post-<?php the_ID(); ?>" <?php post_class('callout secondary'); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class( 'callout secondary' ); ?>>
 		
 		<?php
 			$content_class = 'large-12';
-			if(has_post_thumbnail()) : 
-				$content_class = 'large-9';
-				the_post_thumbnail( 'thumbnail', array( 'class' => 'thumbnail') );
+		if ( has_post_thumbnail() ) :
+			$content_class = 'large-9';
+			the_post_thumbnail( 'thumbnail', array( 'class' => 'thumbnail' ) );
 			endif;
 		?>
 		
-		<div class="entry-wrapper <?php echo $content_class; ?> medium-12 small-12">
+		<div class="entry-wrapper <?php echo esc_attr( $content_class ); ?> medium-12 small-12">
 			<!-- entry-header -->
 			<header class="entry-header">
 				<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
@@ -29,7 +30,7 @@
 
 		
 			<!-- entry-summary entry-content -->
-			<?php if ( is_search() ) : // Only display Excerpts for Search ?>
+			<?php if ( is_search() ) : // Only display excerpts for search. ?>
 				<div class="entry-summary">
 					<?php the_excerpt(); ?>
 				</div>
@@ -37,17 +38,19 @@
 				<div class="entry-content">
 					<?php the_excerpt(); ?>
 					<?php
-						wp_link_pages( array(
-							'before' => '<div class="page-links">' . __( 'Pages:', 'gwt_wp' ),
-							'after'  => '</div>',
-						) );
+						wp_link_pages(
+							array(
+								'before' => '<div class="page-links">' . __( 'Pages:', 'gwt_wp' ),
+								'after'  => '</div>',
+							)
+						);
 					?>
 				</div>
 			<?php endif; ?>
 			
 			<!-- footer entry-meta -->
 			<footer class="entry-meta">
-				<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
+				<?php if ( 'post' === get_post_type() ) : // Hide category and tag text for pages on search. ?>
 				<?php endif; ?>
 			</footer>
 		</div>

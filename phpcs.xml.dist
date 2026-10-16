@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<ruleset name="GWT Theme">
+    <file>.</file>
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/node_modules/*</exclude-pattern>
+    <exclude-pattern>*/foundation/*</exclude-pattern>
+    <exclude-pattern>*/js/*</exclude-pattern>
+
+    <arg name="extensions" value="php"/>
+    <arg value="ps"/>
+
+    <!-- PHP compatibility target -->
+    <config name="testVersion" value="8.3-"/>
+    <rule ref="PHPCompatibilityWP"/>
+
+    <!-- WordPress standards -->
+    <config name="minimum_wp_version" value="6.0"/>
+    <rule ref="WordPress"/>
+</ruleset>

@@ -4,6 +4,7 @@
  *
  * @package gwt_wp
  */
+
 ?>
 <?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>
 <aside id="sidebar-left" class="<?php govph_displayoptions( 'govph_sidebar_position_left' ); ?>columns" role="complementary">

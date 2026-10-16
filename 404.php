@@ -14,11 +14,11 @@ get_header();
 	
 	<div class="large-8 medium-8 columns">
 		<div class="notfound">
-			<h1 class="page-title"><?php _e( 'Sorry, the page you are looking for cannot be found', 'gwt_wp' ); ?></h1>
+			<h1 class="page-title"><?php esc_html_e( 'Sorry, the page you are looking for cannot be found', 'gwt_wp' ); ?></h1>
 			
 			<div class="page-content notfound">
 				<p>The page you requested may have been moved to a new location or removed from the site. 
-				<br>Go back to the <a href="<?php echo esc_url(home_url())?>">HOME PAGE</a> or find what you are looking for in the search box below.</p>
+				<br>Go back to the <a href="<?php echo esc_url( home_url() ); ?>">HOME PAGE</a> or find what you are looking for in the search box below.</p>
 				<aside class="search-404"><?php get_search_form(); ?></aside>
 			</div>
 		</div>

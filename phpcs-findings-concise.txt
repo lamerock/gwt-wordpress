@@ -1,0 +1,98 @@
+﻿ | 107 | ERROR |  | Expected 1 spaces after opening parenthesis; 0 found (PEAR.Functions.FunctionCallSignature.SpaceAfterOpenBracket
+ | 107 | ERROR |  | Expected 1 spaces before closing parenthesis; 0 found (PEAR.Functions.FunctionCallSignature.SpaceBeforeCloseBrack
+ | 107 | WARNING | Universal.Operators.StrictComparisons.LooseNotEqual | Loose comparisons are not allowed. Expected: "!=="; Found: "!="
+ | 107 | ERROR |  | No
+ | 21 | ERROR |  | Expected 1 spaces before closing parenthesis; 0 found (PEAR.Functions.FunctionCallSignature.SpaceBeforeCloseBracke
+ | 22 | ERROR | Squiz.WhiteSpace.SuperfluousWhitespace.EndLine | Whitespace found at end of line
+ | 23 | ERROR | Squiz.Commenting.InlineComment.NoSpaceBefore | No space found before comment text; expected "// end of the loop" but found "//end of the loop"
+ | 23 | ERROR | Squiz.Commenting.InlineComment.InvalidEndChar | Inline comments must end in full-stops, exclamation marks, or question marks
+ | 23 | ERROR | Squiz.WhiteSpace.SuperfluousWhitespace.EndLine | Whitespace found at end of line
+ | 28 | ERROR |  | Space after opening control structure is required (WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceAfterSt
+ | 28 | ERROR |  | No space before opening parenthesis is prohibited (WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceBeforeO
+ | 28 | ERROR |  | No space after opening parenthesis is prohibited (WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceAfterOp
+ | 28 | ERROR | Squiz.ControlStructures.ControlSignature.SpaceAfterKeyword | Expected 1 space after IF keyword; 0 found
+ | 28 | ERROR | PEAR.Functions.FunctionCallSignature.SpaceAfterOpenBracket | Expected 1 spaces after opening parenthesis; 0 found
+ | 28 | ERROR |  | Expected 1 spaces before closing parenthesis; 0 found (PEAR.Functions.FunctionCallSignature.SpaceBeforeCloseBracke
+ | 28 | ERROR |  | No space before closing parenthesis is prohibited (WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceBeforeC
+ | 28 | ERROR |  | Expected 1 space after closing parenthesis; found 0 (Squiz.ControlStructures.ControlSignature.SpaceAfterClosePar
+ | 28 | ERROR |  | Space between opening control structure and closing parenthesis is required (WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceAfterCl
+ | 33 | ERROR |  | Space after opening control structure is required (WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceAfterSt
+ | 33 | ERROR |  | No space before opening parenthesis is prohibited (WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceBeforeO
+ | 33 | ERROR |  | No space after opening parenthesis is prohibited (WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceAfterOp
+ | 33 | ERROR | Squiz.ControlStructures.ControlSignature.SpaceAfterKeyword | Expected 1 space after IF keyword; 0 found
+ | 33 | ERROR | PEAR.Functions.FunctionCallSignature.SpaceAfterOpenBracket | Expected 1 spaces after opening parenthesis; 0 found
+ | 33 | ERROR |  | Expected 1 spaces before closing parenthesis; 0 found (PEAR.Functions.FunctionCallSignature.SpaceBeforeCloseBracke
+ | 33 | ERROR |  | No space before closing parenthesis is prohibited (WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceBeforeC
+ | 33 | ERROR |  | Expected 1 space after closing parenthesis; found 0 (Squiz.ControlStructures.ControlSignature.SpaceAfterClosePar
+ | 33 | ERROR |  | Space between opening control structure and closing parenthesis is required (WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceAfterCl
+template-parts\content-none.php | 1 | ERROR | Generic.Files.LineEndings.InvalidEOLChar | End of line character is invalid; expected "\n" but found "\r\n"
+template-parts\content-none.php | 7 | ERROR | Squiz.Commenting.FileComment.SpacingAfterComment | There must be exactly one blank line after the file comment
+template-parts\content-none.php | 12 | ERROR | WordPress.Security.EscapeOutput.UnsafePrintingFunction | All output should be run through an escaping function (like esc_html_e() or esc_attr_e()), found '_e'.
+template-parts\content-none.php | 18 | ERROR | WordPress.Security.EscapeOutput.OutputNotEscaped | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '__'.
+template-parts\content-none.php | 18 | ERROR | WordPress.WP.I18n.MissingTranslatorsComment | A function call to __() with texts containing placeholders was found, but was not accompanied by a "translators:" comment on the line above to clarify the meaning of the placeholders.
+template-parts\content-none.php | 22 | ERROR | WordPress.Security.EscapeOutput.UnsafePrintingFunction | All output should be run through an escaping function (like esc_html_e() or esc_attr_e()), found '_e'.
+template-parts\content-page.php | 1 | ERROR | Generic.Files.LineEndings.InvalidEOLChar | End of line character is invalid; expected "\n" but found "\r\n"
+template-parts\content-page.php | 7 | ERROR | Squiz.Commenting.FileComment.SpacingAfterComment | There must be exactly one blank line after the file comment
+template-parts\content-page.php | 16 | ERROR | PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket | Opening parenthesis of a multi-line function call must be the last content on the line
+template-parts\content-page.php | 19 | ERROR | PEAR.Functions.FunctionCallSignature.CloseBracketLine | Closing parenthesis of a multi-line function call must be on a line by itself
+template-parts\content-page.php | 20 | ERROR | Generic.WhiteSpace.ScopeIndent.IncorrectExact | Line indented incorrectly; expected 3 tabs, found 2
+template-parts\content-search.php | 1 | ERROR | Generic.Files.LineEndings.InvalidEOLChar | End of line character is invalid; expected "\n" but found "\r\n"
+template-parts\content-search.php | 7 | ERROR | Squiz.Commenting.FileComment.SpacingAfterComment | There must be exactly one blank line after the file comment
+template-parts\content-search.php | 11 | ERROR | PEAR.Functions.FunctionCallSignature.SpaceAfterOpenBracket | Expected 1 spaces after opening parenthesis; 0 found
+template-parts\content-search.php | 11 | ERROR |  | Expected 1 spaces before closing parenthesis; 0 found (PEAR.Functions.FunctionCallSignature.SpaceBeforeCloseBracke
+template-parts\content-search.php | 15 | ERROR | Generic.WhiteSpace.ScopeIndent.IncorrectExact | Line indented incorrectly; expected 2 tabs, found 3
+template-parts\content-search.php | 15 | ERROR |  | Space after opening control structure is required (WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceAfterSt
+template-parts\content-search.php | 15 | ERROR |  | No space before opening parenthesis is prohibited (WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceBeforeO
+template-parts\content-search.php | 15 | ERROR |  | No space after opening parenthesis is prohibited (WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceAfterOp
+template-parts\content-search.php | 15 | ERROR | Squiz.ControlStructures.ControlSignature.SpaceAfterKeyword | Expected 1 space after IF keyword; 0 found
+template-parts\content-search.php | 15 | ERROR |  | No space before closing parenthesis is prohibited (WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceBeforeC
+template-parts\content-search.php | 15 | ERROR | Squiz.WhiteSpace.SuperfluousWhitespace.EndLine | Whitespace found at end of line
+template-parts\content-search.php | 17 | ERROR |  | Expected 1 space before the array closer in a single line array. Found: no spaces (NormalizedArrays.Arrays.ArrayBraceSpacing.SpaceBeforeArrayC
+template-parts\content-search.php | 21 | ERROR | WordPress.Security.EscapeOutput.OutputNotEscaped | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$content_class'.
+template-parts\content-search.php | 32 | ERROR | Squiz.Commenting.InlineComment.InvalidEndChar | Inline comments must end in full-stops, exclamation marks, or question marks
+template-parts\content-search.php | 40 | ERROR |  | Opening parenthesis of a multi-line function call must be the last content on the line (PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracke
+template-parts\content-search.php | 43 | ERROR | PEAR.Functions.FunctionCallSignature.CloseBracketLine | Closing parenthesis of a multi-line function call must be on a line by itself
+template-parts\content-search.php | 50 | WARNING | Universal.Operators.StrictComparisons.LooseEqual | Loose comparisons are not allowed. Expected: "==="; Found: "=="
+template-parts\content-search.php | 50 | ERROR | Squiz.Commenting.InlineComment.InvalidEndChar | Inline comments must end in full-stops, exclamation marks, or question marks
+template-parts\content-single.php | 1 | ERROR | Generic.Files.LineEndings.InvalidEOLChar | End of line character is invalid; expected "\n" but found "\r\n"
+template-parts\content-single.php | 7 | ERROR | Squiz.Commenting.FileComment.SpacingAfterComment | There must be exactly one blank line after the file comment
+template-parts\content-single.php | 20 | ERROR | PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket | Opening parenthesis of a multi-line function call must be the last content on the line
+template-parts\content-single.php | 23 | ERROR | PEAR.Functions.FunctionCallSignature.CloseBracketLine | Closing parenthesis of a multi-line function call must be on a line by itself
+template-parts\content-single.php | 24 | ERROR | Generic.WhiteSpace.ScopeIndent.IncorrectExact | Line indented incorrectly; expected 3 tabs, found 2
+template-parts\content.php | 1 | ERROR | Generic.Files.LineEndings.InvalidEOLChar | End of line character is invalid; expected "\n" but found "\r\n"
+template-parts\content.php | 2 | ERROR | Generic.Commenting.DocComment.MissingShort | Missing short description in doc comment
+template-parts\content.php | 5 | ERROR | Squiz.Commenting.FileComment.SpacingAfterComment | There must be exactly one blank line after the file comment
+template-parts\content.php | 9 | ERROR | PEAR.Functions.FunctionCallSignature.SpaceAfterOpenBracket | Expected 1 spaces after opening parenthesis; 0 found
+template-parts\content.php | 9 | ERROR |  | Expected 1 spaces before closing parenthesis; 0 found (PEAR.Functions.FunctionCallSignature.SpaceBeforeCloseBracke
+template-parts\content.php | 13 | ERROR | Generic.WhiteSpace.ScopeIndent.IncorrectExact | Line indented incorrectly; expected 2 tabs, found 3
+template-parts\content.php | 13 | ERROR |  | Space after opening control structure is required (WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceAfterSt
+template-parts\content.php | 13 | ERROR |  | No space before opening parenthesis is prohibited (WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceBeforeO
+template-parts\content.php | 13 | ERROR |  | No space after opening parenthesis is prohibited (WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceAfterOp
+template-parts\content.php | 13 | ERROR | Squiz.ControlStructures.ControlSignature.SpaceAfterKeyword | Expected 1 space after IF keyword; 0 found
+template-parts\content.php | 13 | ERROR |  | No space before closing parenthesis is prohibited (WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceBeforeC
+template-parts\content.php | 13 | ERROR | Squiz.WhiteSpace.SuperfluousWhitespace.EndLine | Whitespace found at end of line
+template-parts\content.php | 15 | ERROR |  | Expected 1 space before the array closer in a single line array. Found: no spaces (NormalizedArrays.Arrays.ArrayBraceSpacing.SpaceBeforeArrayC
+template-parts\content.php | 18 | ERROR | Generic.WhiteSpace.ScopeIndent.IncorrectExact | Line indented incorrectly; expected 2 tabs, found 3
+template-parts\content.php | 18 | ERROR |  | No space after opening parenthesis is prohibited (WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceAfterOp
+template-parts\content.php | 18 | ERROR | PEAR.Functions.FunctionCallSignature.SpaceAfterOpenBracket | Expected 1 spaces after opening parenthesis; 0 found
+template-parts\content.php | 18 | ERROR |  | Expected 1 spaces before closing parenthesis; 0 found (PEAR.Functions.FunctionCallSignature.SpaceBeforeCloseBracke
+template-parts\content.php | 18 | ERROR | PEAR.Functions.FunctionCallSignature.SpaceAfterOpenBracket | Expected 1 spaces after opening parenthesis; 0 found
+template-parts\content.php | 18 | ERROR |  | Expected 1 spaces before closing parenthesis; 0 found (PEAR.Functions.FunctionCallSignature.SpaceBeforeCloseBracke
+template-parts\content.php | 18 | ERROR |  | No space before closing parenthesis is prohibited (WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceBeforeC
+template-parts\content.php | 23 | ERROR | WordPress.Security.EscapeOutput.OutputNotEscaped | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '$content_class'.
+template-parts\content.php | 28 | WARNING | Universal.Operators.StrictComparisons.LooseEqual | Loose comparisons are not allowed. Expected: "==="; Found: "=="
+template-parts\content.php | 37 | ERROR | Squiz.Commenting.InlineComment.InvalidEndChar | Inline comments must end in full-stops, exclamation marks, or question marks
+template-parts\content.php | 45 | ERROR |  | Opening parenthesis of a multi-line function call must be the last content on the line (PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracke
+template-parts\content.php | 48 | ERROR | PEAR.Functions.FunctionCallSignature.CloseBracketLine | Closing parenthesis of a multi-line function call must be on a line by itself
+template-parts\content.php | 55 | WARNING | Universal.Operators.StrictComparisons.LooseEqual | Loose comparisons are not allowed. Expected: "==="; Found: "=="
+template-parts\content.php | 55 | ERROR | Squiz.Commenting.InlineComment.InvalidEndChar | Inline comments must end in full-stops, exclamation marks, or question marks
+template-parts\no-results.php | 1 | ERROR | Generic.Files.LineEndings.InvalidEOLChar | End of line character is invalid; expected "\n" but found "\r\n"
+template-parts\no-results.php | 8 | ERROR | Squiz.Commenting.FileComment.SpacingAfterComment | There must be exactly one blank line after the file comment
+template-parts\no-results.php | 13 | ERROR | WordPress.Security.EscapeOutput.UnsafePrintingFunction | All output should be run through an escaping function (like esc_html_e() or esc_attr_e()), found '_e'.
+template-parts\no-results.php | 19 | ERROR | WordPress.Security.EscapeOutput.OutputNotEscaped | All output should be run through an escaping function (see the Security sections in the WordPress Developer Handbooks), found '__'.
+template-parts\no-results.php | 19 | ERROR | WordPress.WP.I18n.MissingTranslatorsComment | A function call to __() with texts containing placeholders was found, but was not accompanied by a "translators:" comment on the line above to clarify the meaning of the placeholders.
+template-parts\no-results.php | 21 | ERROR | Squiz.PHP.EmbeddedPhp.ContentAfterOpen | Opening PHP tag must be on a line by itself
+template-parts\no-results.php | 21 | WARNING | Squiz.PHP.CommentedOutCode.Found | This comment is 65% valid code; is this commented out code?
+template-parts\no-results.php | 21 | ERROR | Squiz.Commenting.BlockComment.NoNewLine | Block comment text must start on a new line
+template-parts\no-results.php | 24 | ERROR | Squiz.PHP.EmbeddedPhp.ContentBeforeEnd | Closing PHP tag must be on a line by itself
+template-parts\no-results.php | 28 | ERROR | WordPress.Security.EscapeOutput.UnsafePrintingFunction | All output should be run through an escaping function (like esc_html_e() or esc_attr_e()), found '_e'.

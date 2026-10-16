@@ -31,6 +31,7 @@ function eraseCookie(name) {
 }
 
 (function(jQuery, Foundation){
+	var $ = jQuery;
 
 	// Orbit Slider play/pause options
 	Foundation.Orbit.defaults.controls = true;
@@ -205,5 +206,5 @@ function eraseCookie(name) {
 
 	});
 
+	jQuery(document).foundation();
 })(jQuery, Foundation);
-$(document).foundation();

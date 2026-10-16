@@ -2,6 +2,15 @@
 
 Notable changes to this project are documented here in reverse chronological order. Release dates use ISO 8601 format.
 
+## [25.5.0] - 2026-10-16
+
+### Changed
+
+- Updated Foundation to 6.9.0, jQuery to 3.7.1, what-input to 5.2.12, Font Awesome to 4.7.0, FlexSlider to 2.7.2, and ResponsiveSlides to 1.55.
+- Switched Foundation to its float-grid build and use WordPress's bundled jQuery.
+- Preserve the theme's FlexSlider presentation with overrides for the updated library.
+- Use the theme version to invalidate cached theme CSS and JavaScript assets.
+
 ## [25.4.0] - 2026-10-16
 
 ### Changed

@@ -1,6 +1,6 @@
 # Government Web Template (GWT) for WordPress
 
-[![Theme version 25.4.0](https://img.shields.io/badge/theme-25.4.0-21759B?logo=wordpress&logoColor=white)](style.css)
+[![Theme version 25.5.0](https://img.shields.io/badge/theme-25.5.0-21759B?logo=wordpress&logoColor=white)](style.css)
 [![PHP 8.3+](https://img.shields.io/badge/PHP-8.3%2B-777BB4?logo=php&logoColor=white)](https://www.php.net/supported-versions.php)
 [![MIT license](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/license/mit)
 [![Open GitHub issues](https://img.shields.io/github/issues/iGovPhil/gwt-wordpress)](https://github.com/iGovPhil/gwt-wordpress/issues)

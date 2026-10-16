@@ -1,12 +1,14 @@
 <?php
-/*
-Plugin Name: Envato FlexSlider
-Plugin URI:
-Description: A simple plugin that integrates FlexSlider (http://flex.madebymufffin.com/) with WordPress using custom post types!
-Author: Joe Casabona
-Version: 0.5
-Author URI: http://www.casabona.org
-*/
+/**
+ * Plugin Name: Envato FlexSlider
+ * Plugin URI:
+ * Description: A simple plugin that integrates FlexSlider (http://flex.madebymufffin.com/) with WordPress using custom post types!
+ * Author: Joe Casabona
+ * Version: 0.5
+ * Author URI: http://www.casabona.org
+ *
+ * @package Envato_FlexSlider
+ */
 
 /*Some Set-up*/
 define( 'EFS_PATH', get_template_directory_uri() . '/inc/vendors/' . basename( __DIR__ ) . '/' );
@@ -16,6 +18,11 @@ define( 'EFS_VERSION', '0.5' );
 /*Files to Include*/
 require_once 'slider-img-type.php';
 
+/**
+ * Build the slider markup.
+ *
+ * @return string Slider markup.
+ */
 function efs_get_slider() {
 	$efs_query = 'post_type=slider-image';
 	query_posts( $efs_query );
@@ -82,14 +89,21 @@ function efs_get_slider() {
 	return $slider;
 }
 
-/**add the shortcode for the slider- for use in editor**/
+/**
+ * Return slider markup for the shortcode.
+ *
+ * @param array       $atts    Shortcode attributes.
+ * @param string|null $content Shortcode content.
+ *
+ * @return string Slider markup.
+ */
 function efs_insert_slider( $atts, $content = null ) {
 	$slider = efs_get_slider();
 	return $slider;
 }
 add_shortcode( 'ef_slider', 'efs_insert_slider' );
 
-/**add template tag- for use in themes**/
+/** Display the slider markup. */
 function efs_slider() {
-	print efs_get_slider();
+	echo wp_kses_post( efs_get_slider() );
 }

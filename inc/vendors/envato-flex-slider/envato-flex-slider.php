@@ -25,7 +25,7 @@ function efs_get_slider() {
 
 	if ( have_posts() ) :
 
-		$slider = '<div class="orbit" role="region" aria-label="Banner Slider" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out">
+		$slider = '<div class="orbit" role="region" aria-label="Banner Slider" data-orbit data-options="useMUI:false">
 					<div class="orbit-wrapper">';
 
 		$count = 0;

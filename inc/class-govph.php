@@ -722,7 +722,7 @@ function mw_enqueue_color_picker( $hook_suffix ) {
 	// Enqueue media and color-picker assets for the options page.
 	wp_enqueue_media();
 	wp_enqueue_style( 'wp-color-picker' );
-	wp_enqueue_script( 'my-script-handle', get_template_directory_uri() . '/js/color.js', array( 'wp-color-picker' ), wp_get_theme()->get( 'Version' ), true );
+	wp_enqueue_script( 'my-script-handle', get_template_directory_uri() . '/js/color.js', array( 'jquery', 'wp-color-picker' ), wp_get_theme()->get( 'Version' ), true );
 }
 
 /**

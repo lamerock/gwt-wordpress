@@ -1,0 +1,16 @@
+{
+	"apiVersion": 3,
+	"name": "gwt/transparency-seal",
+	"title": "Transparency Seal",
+	"category": "widgets",
+	"icon": "admin-site-alt3",
+	"description": "Displays a linked Transparency Seal image.",
+	"textdomain": "gwt_wp",
+	"attributes": {
+		"url": {
+			"type": "string",
+			"default": "https://domain.gov.ph/transparency"
+		}
+	},
+	"editorScript": "govph-transparency-block-editor"
+}

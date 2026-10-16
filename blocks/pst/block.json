@@ -1,0 +1,10 @@
+{
+	"apiVersion": 3,
+	"name": "gwt/pst",
+	"title": "Philippine Standard Time",
+	"category": "widgets",
+	"icon": "clock",
+	"description": "Displays Philippine Standard Time.",
+	"textdomain": "gwt_wp",
+	"editorScript": "govph-pst-block-editor"
+}

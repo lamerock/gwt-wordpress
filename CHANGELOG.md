@@ -2,6 +2,16 @@
 
 Notable changes to this project are documented here in reverse chronological order. Release dates use ISO 8601 format.
 
+## [25.5.1] - 2026-10-16
+
+### Added
+
+- Replaced the classic Philippine Standard Time and Transparency Seal widgets with block-based widgets, and added migration for existing widget placements.
+- Added a browser-local Asia/Manila clock fallback when the official PST service is unavailable.
+
+### Compatibility
+
+- Requires WordPress 6.3 or newer for Block API v3.
 ## [25.5.0] - 2026-10-16
 
 ### Changed

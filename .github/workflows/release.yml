@@ -14,10 +14,18 @@ jobs:
       - uses: actions/checkout@v4
 
       # git archive honors export-ignore rules in .gitattributes
-      - name: Build zip
-        run: git archive --prefix=gwt-wordpress/ -o gwt-wordpress.zip HEAD
+      - name: Build archives
+        env:
+          TAG: ${{ github.event.release.tag_name }}
+        run: |
+          VERSION="${TAG#v}"
+          git archive --prefix=gwt-wordpress/ -o "gwt-wordpress-${VERSION}.zip" HEAD
+          git archive --prefix=gwt-wordpress/ HEAD | gzip -n > "gwt-wordpress-${VERSION}.tar.gz"
+          echo "ZIP=gwt-wordpress-${VERSION}.zip" >> "$GITHUB_ENV"
+          echo "TAR_GZ=gwt-wordpress-${VERSION}.tar.gz" >> "$GITHUB_ENV"
 
-      - name: Attach zip to release
+      - name: Attach archives to release
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release upload "${{ github.event.release.tag_name }}" gwt-wordpress.zip --clobber
+          TAG: ${{ github.event.release.tag_name }}
+        run: gh release upload "$TAG" "$ZIP" "$TAR_GZ" --clobber

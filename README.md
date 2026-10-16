@@ -1,119 +1,52 @@
-#Government Web Template (GWT) for WordPress
+# Government Web Template (GWT) for WordPress
 
-Use this as a a guide for creating your banner slider images:
-- Image should be inserted as a featured image, full size
-- Caption input is on the title field
-- Linked article should be indicated in the content field
+[![Theme version 25.4.0](https://img.shields.io/badge/theme-25.4.0-21759B?logo=wordpress&logoColor=white)](style.css)
+[![PHP 8.3+](https://img.shields.io/badge/PHP-8.3%2B-777BB4?logo=php&logoColor=white)](https://www.php.net/supported-versions.php)
+[![MIT license](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/license/mit)
+[![Open GitHub issues](https://img.shields.io/github/issues/iGovPhil/gwt-wordpress)](https://github.com/iGovPhil/gwt-wordpress/issues)
 
-## Known bugs and requests for enhancements (RFEs)
-For a list of known issues and RFEs, check the [issue tracking system](https://github.com/iGovPhil/gwt-wordpress/issues).
+GWT is a responsive WordPress theme based on the Unified Web Content Policy draft prepared by PCDSPO, DOST-ASTI, and DOST-ICTO. It is built on the ZURB Foundation framework.
 
-## Future updates
- - Tabbed Theme Options
+Theme features include responsive layouts, configurable menus and widget areas, a banner slider, Philippine Standard Time and Transparency Seal widgets, and accessibility options.
 
-## CHANGE LOGS
-**04/04/2019**
-- Fix conditional display on rightsidebar
+## Requirements
 
-**01/17/2019**
-- Fix missing jquery file issue causing to disable all scripts within the page
+- A WordPress installation
+- PHP 8.3 or newer
 
-**12/13/2018**
-- Fix theme missing color option issue
-- Added native style for alignleft alignright classes
+## Installation
 
-**03/07/2018**
-- Fix long text wrapping in menu
+1. Install the theme by uploading a ZIP from **Appearance > Themes > Add New**, or copy this directory into `wp-content/themes/`.
+2. Open **Appearance > Themes** in the WordPress dashboard and activate **GWT-Wordpress**.
+3. Configure the theme's menus, widgets, and options in the dashboard.
 
-**10/03/2017**
-- Added URL Link support for banner Slider
+## Banner Slider
 
-**02/23/2017**
-- Fixed empty menu issue when nothing is assigned
-- Added automatic display of auxiliary menu if menu is present, removed theme option selection
-- Fixed banner left button bug.
+For each slider item, set a full-size featured image, enter its caption in the post title, and put the destination URL in the post content.
 
-**07/22/2016**
-- [Update] Foundation version 6.2.2
-- [Features] Philippine Standard Time (PST)
-    - Font customization
-- [Features] Panel Top & Bottom section
-    - Background color customization
-- [Enhancement] Orbit Slider
-- [Enhancement] Responsive Mobile Menu
-- [Enhancement] Transparency Seal
-- [Enhancement] Accessibility Add-on
-    - High Contrast mode
-    - Skip to Content
-    - Skip to Footer
+## Development
 
-**02/29/2016**
-- Fixed mega menu structure
-- Fixed banner slider full width
-- Added feature image on post
-- Added default widgets on theme activation
-	- transparency seal Logo widget
-	- philippine standard time widget
-- Added theme customization on template's theme option
-    - Masthead logo image with text
-        - agency name
-        - tagline
-        - font color
-        - image logo alt text
-    - Content panel and sidebar customization
-        - border width
-        - border color
-        - border radius
-        - background color
-    - Content header font size and rendering
-    - Agency Footer's background color customization
-- Changed version branding to version 2.0 (Pansit)
-- Removed the Accessibility Add-on
-    - High Contrast Mode
-    - Grayscale Mode
-    - Toggle font size
+Install the development dependencies with Composer:
 
-**09/30/2015**
-- Fixed Agency Footer extra padding.
-- Changed the accessibility widget to right side 
+```sh
+composer install
+```
 
-**09/22/2015**
-- Added new accessibility features:
-  - Toggle High contrast mode
-  - Toggle Grey scale
-  - Popup Accessibility Statement
-- Fixed Breadcrumbs '/' after Youre Here:
-- Fixed Panel Top extra padding issue.
-- Added mega menu feature
-- Sticky top menu
+Run the configured WordPress Coding Standards check on a changed PHP file:
 
-**04/10/2015**
-- Added drop shadow on drop down menu
+```sh
+vendor/bin/phpcs path/to/file.php
+```
 
-**03/19/2015**
-- Added breadcrumbs support
+To apply automatic fixes, run PHPCBF and then run PHPCS again:
 
-**02/11/2015**
-- Smaller headings for Agency footer (use h3 tag)
-- Smaller headings for Content Post (use h5 tag)
-- Smaller headings for widgets
-- Bannerd title paddings
-- Remove box design on top and bottom panel, added custom class: box-mode
-- Smaller headings for Post Navigation (pagination) (use h4)
-- Automatic trim of character/word for Post lists
-- Responsive Logo Support
-- Accessibility shortcut bug fix
-- Created an option to automatically trim at specific characters/word for Post lists
-- Created an option to remove published date
-- Created an option to remove author
-- Removed box effect on Author
+```sh
+vendor/bin/phpcbf path/to/file.php
+vendor/bin/phpcs path/to/file.php
+```
 
-**08/07/2014**
-- Revamped new design
-- Added new widget locations (New widget locations banner section 1, banner section 2, ear content 1, ear content 2 not yet usable)
-- For banner content, use featured image to upload images, use the content area for linking the image to an external page, use the title for captions
+## Support
 
-**03/18/2014**
-- Full width template functions
-- Text decoration for standard footer links
-- Slider get functions
+Report bugs and request enhancements in the [GitHub issue tracker](https://github.com/iGovPhil/gwt-wordpress/issues).
+
+See [CHANGELOG.md](CHANGELOG.md) for current and historical changes.

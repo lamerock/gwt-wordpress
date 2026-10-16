@@ -1,30 +1,47 @@
-# Government Web Template (GWT) for WordPress
+# GWT WordPress Theme
 
 [![Theme version 25.5.1](https://img.shields.io/badge/theme-25.5.1-21759B?logo=wordpress&logoColor=white)](style.css)
+[![WordPress 6.3+](https://img.shields.io/badge/WordPress-6.3%2B-21759B?logo=wordpress&logoColor=white)](https://wordpress.org/download/)
 [![PHP 8.3+](https://img.shields.io/badge/PHP-8.3%2B-777BB4?logo=php&logoColor=white)](https://www.php.net/supported-versions.php)
 [![MIT license](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/license/mit)
-[![Open GitHub issues](https://img.shields.io/github/issues/iGovPhil/gwt-wordpress)](https://github.com/iGovPhil/gwt-wordpress/issues)
+[![Open GitHub issues](https://img.shields.io/github/issues/lamerock/gwt-wordpress)](https://github.com/lamerock/gwt-wordpress/issues)
 
-GWT is a responsive WordPress theme based on the Unified Web Content Policy draft prepared by PCDSPO, DOST-ASTI, and DOST-ICTO. It is built on the ZURB Foundation framework.
+GWT (Government Web Template) is a responsive WordPress theme based on the draft Unified Web Content Policy prepared by PCDSPO, DOST-ASTI, and DOST-ICTO. It uses the ZURB Foundation framework.
 
-Theme features include responsive layouts, configurable menus and widget areas, a banner slider, block-based Philippine Standard Time and Transparency Seal widgets, and accessibility options.
+This repository is an independently maintained fork based on GWT WordPress 25.3.3. It does not track upstream releases; development and support for this fork are managed here.
 
-The PST widget uses the official synchronized time service when available and falls back to the browser clock formatted for Asia/Manila when that service cannot be reached.
+## Features
+
+- Responsive page layouts with configurable menus, sidebars, footer areas, and homepage banner sections.
+- Theme options for agency branding, colors, breadcrumbs, publishing details, and accessibility links and keyboard shortcuts.
+- Homepage banner slider with featured images and optional destination links.
+- Philippine Standard Time and Transparency Seal blocks for the WordPress block editor.
+- The Philippine Standard Time block uses the official synchronized time service when available, with a browser-clock fallback formatted for Asia/Manila.
 
 ## Requirements
 
-- WordPress 6.3 or newer
-- PHP 8.3 or newer
+- WordPress 6.3 or newer.
+- PHP 8.3 or newer.
 
 ## Installation
 
-1. Install the theme by uploading a ZIP from **Appearance > Themes > Add New**, or copy this directory into `wp-content/themes/`.
-2. Open **Appearance > Themes** in the WordPress dashboard and activate **GWT-Wordpress**.
-3. Configure the theme's menus, widget blocks, and options in the dashboard.
+1. Upload the theme ZIP under **Appearance > Themes > Add New**, or copy this directory into `wp-content/themes/`.
+2. In the dashboard, open **Appearance > Themes** and activate **GWT-Wordpress**.
+3. Configure the theme under **Appearance > Theme Options**. Assign menus under **Appearance > Menus** and add blocks or widgets under **Appearance > Widgets**.
 
-## Banner Slider
+## Configuration
 
-For each slider item, set a full-size featured image, enter its caption in the post title, and put the destination URL in the post content.
+### Menus and widget areas
+
+The theme registers Auxiliary Menu, Left Menu Top bar, and Right Menu Top bar locations. Widget areas include left and right sidebars, two homepage banner sections, top and bottom panels, and four agency footer areas. Assign content to the areas you use under **Appearance > Widgets**.
+
+### Homepage slider
+
+Add a slider item from **Slider Images** in the dashboard. Set its featured image, use the post title for the caption, and enter the destination in the slider URL field. Slider items appear on the homepage.
+
+### Editor blocks
+
+Add **Philippine Standard Time** or **Transparency Seal** from the Widgets block inserter. Set the Transparency Seal block's URL to the destination page for the seal.
 
 ## Development
 
@@ -34,21 +51,21 @@ Install the development dependencies with Composer:
 composer install
 ```
 
-Run the configured WordPress Coding Standards check on a changed PHP file:
+Run PHPCS on a changed PHP file. The repository's `phpcs.xml.dist` applies WordPress Coding Standards and PHP compatibility checks, and excludes bundled libraries:
 
 ```sh
 vendor/bin/phpcs path/to/file.php
 ```
 
-To apply automatic fixes, run PHPCBF and then run PHPCS again:
+To apply automatic fixes, run PHPCBF on the file and then run PHPCS again:
 
 ```sh
 vendor/bin/phpcbf path/to/file.php
 vendor/bin/phpcs path/to/file.php
 ```
 
+On Windows PowerShell, use the batch files in `vendor\bin` (for example, `.\vendor\bin\phpcs.bat path\to\file.php`).
+
 ## Support
 
-Report bugs and request enhancements in the [GitHub issue tracker](https://github.com/iGovPhil/gwt-wordpress/issues).
-
-See [CHANGELOG.md](CHANGELOG.md) for current and historical changes.
+Report bugs and request enhancements in the [GitHub issue tracker](https://github.com/lamerock/gwt-wordpress/issues). See [CHANGELOG.md](CHANGELOG.md) for release history.

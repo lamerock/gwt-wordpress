@@ -37,8 +37,9 @@ add_action( 'after_switch_theme', 'gwt_switch_theme' );
  * @global string $wp_version WordPress version.
  */
 function gwt_upgrade_notice() {
-	$message = sprintf( __( 'GWT requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again.', 'gwt' ), $GLOBALS['wp_version'] );
-	printf( '<div class="error"><p>%s</p></div>', $message );
+	/* translators: %s: Current WordPress version. */
+	$message = sprintf( __( 'GWT requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again.', 'gwt' ), esc_html( $GLOBALS['wp_version'] ) );
+	printf( '<div class="error"><p>%s</p></div>', esc_html( $message ) );
 }
 
 /**
@@ -49,9 +50,14 @@ function gwt_upgrade_notice() {
  * @global string $wp_version WordPress version.
  */
 function gwt_customize() {
-	wp_die( sprintf( __( 'GWT requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again.', 'gwt' ), $GLOBALS['wp_version'] ), '', array(
-		'back_link' => true,
-	) );
+	wp_die(
+		/* translators: %s: Current WordPress version. */
+		sprintf( esc_html__( 'GWT requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again.', 'gwt' ), esc_html( $GLOBALS['wp_version'] ) ),
+		'',
+		array(
+			'back_link' => true,
+		)
+	);
 }
 add_action( 'load-customize.php', 'gwt_customize' );
 
@@ -63,8 +69,10 @@ add_action( 'load-customize.php', 'gwt_customize' );
  * @global string $wp_version WordPress version.
  */
 function gwt_preview() {
+	// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- The preview flag only selects a read-only route.
 	if ( isset( $_GET['preview'] ) ) {
-		wp_die( sprintf( __( 'GWT requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again.', 'gwt' ), $GLOBALS['wp_version'] ) );
+		/* translators: %s: Current WordPress version. */
+		wp_die( sprintf( esc_html__( 'GWT requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again.', 'gwt' ), esc_html( $GLOBALS['wp_version'] ) ) );
 	}
 }
 add_action( 'template_redirect', 'gwt_preview' );

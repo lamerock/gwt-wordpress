@@ -23,7 +23,7 @@
 	<link rel="shortcut icon" href="<?php echo esc_url( get_stylesheet_directory_uri() . '/favicon.ico' ); ?>" />
 	<?php wp_head(); ?>
 
-	<style <?php the_tags(); ?>>
+	<style>
 		.container-main a, .container-main a:active, .container-main a:visited, 
 		.anchor a, .anchor a:active, .anchor a:visited {
 			<?php govph_displayoptions( 'govph_anchorcolor' ); ?>

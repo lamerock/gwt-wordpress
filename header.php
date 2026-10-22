@@ -116,13 +116,13 @@ WCAG 2.0 contains 12 guidelines organized under 4 principles: Perceivable, Opera
 
 Accessibility Features
 
-Shortcut Keys Combination Activation Combination keys used for each browser.
+Keyboard shortcuts
+Use the combination for your browser followed by the access key shown for the destination.
 
-	Chrome for Linux press (Alt+Shift+shortcut_key) 
-	Chrome for Windows press (Alt+shortcut_key) 
-	For Firefox press (Alt+Shift+shortcut_key) 
-	For Internet Explorer press (Alt+Shift+shortcut_key) then press (enter)
-	On Mac OS press (Ctrl+Opt+shortcut_key)
+	Chrome on Linux and Firefox: Alt+Shift+access key
+	Chrome on Windows: Alt+access key
+	Internet Explorer: Alt+Shift+access key, then Enter
+	macOS: Control+Option+access key
 
 	Accessibility Statement (Combination + 0): Statement page that will show the available accessibility keys. 
 	Home Page (Combination + H): Accessibility key for redirecting to homepage. 
@@ -312,4 +312,3 @@ Press esc, or click the close the button to close this dialog box.
 				</div>
 			</header>
 			<!-- masthead -->
-
